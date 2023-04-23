@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HwAkxLTB7khSyOzLlBeGXUftopUPnK7/HFMGHQcxsvlFUmfjBxlUPwLJfDCnttbyzS3Whj1Z4LMoiU0yvl9kkA==",
+  "dgSpecHash": "hQLv9c9eUveEy8nvG71M4+GDqZE9MuAnIDigX506OT7Jf3SvtJDPHr2KzkgXNcRvjfI4UuARtceB8jnq0vGZUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj",
+  "projectFilePath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"

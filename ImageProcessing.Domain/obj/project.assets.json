@@ -133,9 +133,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj",
-      "projectName": "ImageProcessing.Domain",
-      "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj",
+      "projectName": "ImageProcessing.Models",
+      "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj",
       "packagesPath": "C:\\Users\\jlabp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\obj\\",
       "projectStyle": "PackageReference",

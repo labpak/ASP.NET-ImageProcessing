@@ -3617,7 +3617,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ImageProcessing.Domain": "1.0.0",
+          "ImageProcessing.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
         },
@@ -3628,17 +3628,31 @@
           "bin/placeholder/ImageProcessing.DAL.dll": {}
         }
       },
-      "ImageProcessing.Domain/1.0.0": {
+      "ImageProcessing.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/ImageProcessing.Domain.dll": {}
+          "bin/placeholder/ImageProcessing.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ImageProcessing.Domain.dll": {}
+          "bin/placeholder/ImageProcessing.Models.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ImageProcessing.DAL": "1.0.0",
+          "ImageProcessing.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
         }
       }
     }
@@ -10322,18 +10336,24 @@
       "path": "../ImageProcessing.DAL/ImageProcessing.DAL.csproj",
       "msbuildProject": "../ImageProcessing.DAL/ImageProcessing.DAL.csproj"
     },
-    "ImageProcessing.Domain/1.0.0": {
+    "ImageProcessing.Models/1.0.0": {
       "type": "project",
-      "path": "../ImageProcessing.Domain/ImageProcessing.Domain.csproj",
-      "msbuildProject": "../ImageProcessing.Domain/ImageProcessing.Domain.csproj"
+      "path": "../ImageProcessing.Domain/ImageProcessing.Models.csproj",
+      "msbuildProject": "../ImageProcessing.Domain/ImageProcessing.Models.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "ImageProcessing.DAL >= 1.0.0",
-      "ImageProcessing.Domain >= 1.0.0",
+      "ImageProcessing.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13",
+      "Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10371,8 +10391,11 @@
             "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.DAL\\ImageProcessing.DAL.csproj": {
               "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.DAL\\ImageProcessing.DAL.csproj"
             },
-            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj": {
-              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj"
+            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj": {
+              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj"
+            },
+            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\Service\\Service.csproj"
             }
           }
         }

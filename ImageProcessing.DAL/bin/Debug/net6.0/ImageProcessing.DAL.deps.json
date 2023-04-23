@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "ImageProcessing.DAL/1.0.0": {
         "dependencies": {
-          "ImageProcessing.Domain": "1.0.0",
+          "ImageProcessing.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
         },
@@ -603,12 +603,12 @@
           }
         }
       },
-      "ImageProcessing.Domain/1.0.0": {
+      "ImageProcessing.Models/1.0.0": {
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
-          "ImageProcessing.Domain.dll": {}
+          "ImageProcessing.Models.dll": {}
         }
       }
     }
@@ -1053,7 +1053,7 @@
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
-    "ImageProcessing.Domain/1.0.0": {
+    "ImageProcessing.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

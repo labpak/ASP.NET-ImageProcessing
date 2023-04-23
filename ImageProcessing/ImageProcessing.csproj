@@ -13,7 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ImageProcessing.DAL\ImageProcessing.DAL.csproj" />
-    <ProjectReference Include="..\ImageProcessing.Domain\ImageProcessing.Domain.csproj" />
+    <ProjectReference Include="..\ImageProcessing.Domain\ImageProcessing.Models.csproj" />
+    <ProjectReference Include="..\Service\Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,13 +5,17 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{6A801EF6-B663-44BE-ACB2-832073CB17AB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FA087606-CAB5-41C2-8E5B-046EE32B57E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{FA087606-CAB5-41C2-8E5B-046EE32B57E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing.Domain", "ImageProcessing.Domain\ImageProcessing.Domain.csproj", "{F4EDC6B3-AF1E-4CF2-89C2-4F9177679D06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing.Models", "ImageProcessing.Domain\ImageProcessing.Models.csproj", "{F4EDC6B3-AF1E-4CF2-89C2-4F9177679D06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{F74CFE1F-0221-4514-A31F-62A1A8FAAF80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing.DAL", "ImageProcessing.DAL\ImageProcessing.DAL.csproj", "{4DA1A2F3-93E3-4B8B-8E87-C4322334E799}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{246AEB60-C320-4BD0-AF2A-18E655B47659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{4DA1A2F3-93E3-4B8B-8E87-C4322334E799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DA1A2F3-93E3-4B8B-8E87-C4322334E799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DA1A2F3-93E3-4B8B-8E87-C4322334E799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +46,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F4EDC6B3-AF1E-4CF2-89C2-4F9177679D06} = {FA087606-CAB5-41C2-8E5B-046EE32B57E1}
 		{4DA1A2F3-93E3-4B8B-8E87-C4322334E799} = {F74CFE1F-0221-4514-A31F-62A1A8FAAF80}
+		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF} = {246AEB60-C320-4BD0-AF2A-18E655B47659}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {935B915C-B5C9-4E06-BB1C-96CF18C46CFD}

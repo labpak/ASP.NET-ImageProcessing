@@ -10,6 +10,6 @@ C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Debug\net6.0
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Debug\net6.0\refint\ImageProcessing.DAL.dll
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Debug\net6.0\ImageProcessing.DAL.pdb
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Debug\net6.0\ref\ImageProcessing.DAL.dll
-C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Debug\net6.0\ImageProcessing.Domain.dll
-C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Debug\net6.0\ImageProcessing.Domain.pdb
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Debug\net6.0\ImageProcessing.DAL.csproj.CopyComplete
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Debug\net6.0\ImageProcessing.Models.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Debug\net6.0\ImageProcessing.Models.pdb

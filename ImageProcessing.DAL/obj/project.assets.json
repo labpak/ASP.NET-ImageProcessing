@@ -1046,17 +1046,17 @@
           }
         }
       },
-      "ImageProcessing.Domain/1.0.0": {
+      "ImageProcessing.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/ImageProcessing.Domain.dll": {}
+          "bin/placeholder/ImageProcessing.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ImageProcessing.Domain.dll": {}
+          "bin/placeholder/ImageProcessing.Models.dll": {}
         }
       }
     }
@@ -3226,15 +3226,15 @@
         "version.txt"
       ]
     },
-    "ImageProcessing.Domain/1.0.0": {
+    "ImageProcessing.Models/1.0.0": {
       "type": "project",
-      "path": "../ImageProcessing.Domain/ImageProcessing.Domain.csproj",
-      "msbuildProject": "../ImageProcessing.Domain/ImageProcessing.Domain.csproj"
+      "path": "../ImageProcessing.Domain/ImageProcessing.Models.csproj",
+      "msbuildProject": "../ImageProcessing.Domain/ImageProcessing.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "ImageProcessing.Domain >= 1.0.0",
+      "ImageProcessing.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5"
     ]
@@ -3271,8 +3271,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj": {
-              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Domain.csproj"
+            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj": {
+              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.Domain\\ImageProcessing.Models.csproj"
             }
           }
         }

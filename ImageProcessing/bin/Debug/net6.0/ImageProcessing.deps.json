@@ -9,9 +9,10 @@
       "ImageProcessing/1.0.0": {
         "dependencies": {
           "ImageProcessing.DAL": "1.0.0",
-          "ImageProcessing.Domain": "1.0.0",
+          "ImageProcessing.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13",
+          "Service": "1.0.0"
         },
         "runtime": {
           "ImageProcessing.dll": {}
@@ -2348,7 +2349,7 @@
       },
       "ImageProcessing.DAL/1.0.0": {
         "dependencies": {
-          "ImageProcessing.Domain": "1.0.0",
+          "ImageProcessing.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5"
         },
@@ -2356,12 +2357,21 @@
           "ImageProcessing.DAL.dll": {}
         }
       },
-      "ImageProcessing.Domain/1.0.0": {
+      "ImageProcessing.Models/1.0.0": {
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         },
         "runtime": {
-          "ImageProcessing.Domain.dll": {}
+          "ImageProcessing.Models.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "ImageProcessing.DAL": "1.0.0",
+          "ImageProcessing.Models": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
         }
       }
     }
@@ -3616,7 +3626,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ImageProcessing.Domain/1.0.0": {
+    "ImageProcessing.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,8 +1,10 @@
 using ImageProcessing.DAL;
 using ImageProcessing.DAL.Interfaces;
 using ImageProcessing.DAL.Repositories;
+using ImageProcessing.Models.Response;
 using Microsoft.EntityFrameworkCore;
-
+using Service.Implementation;
+using Service.Interfaces;
 
 namespace ImageProcessing
 {
@@ -21,7 +23,11 @@ namespace ImageProcessing
            
 
             builder.Services.AddScoped<IImageRepository, ImageRepository>();
-            
+            builder.Services.AddScoped<IImageService, ImageService>();
+            //builder.Services.AddScoped<IBaseResponse, BaseResponse>();
+
+
+
 
             var app = builder.Build();
 

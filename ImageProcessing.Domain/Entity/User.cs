@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageProcessing.Domain.Entity
+namespace ImageProcessing.Models.Entity
 {
     internal class User
     {

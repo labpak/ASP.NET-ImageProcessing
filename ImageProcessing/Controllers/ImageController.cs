@@ -1,38 +1,30 @@
-﻿using ImageProcessing.DAL.Interfaces;
-using ImageProcessing.Domain.Entity;
+﻿using Azure;
+using ImageProcessing.DAL.Interfaces;
+using ImageProcessing.Models.Entity;
 using Microsoft.AspNetCore.Mvc;
+using Service.Interfaces;
+using ImageProcessing.Models.Enum;
+using ImageProcessing.Models.Response;
 
 namespace ImageProcessing.Controllers
 {
     public class ImageController : Controller
     {
-        private readonly IImageRepository _imageRepository;
-        public ImageController(IImageRepository imageRepository)
+        private readonly IImageService _imageService;
+        public ImageController(IImageService imageService)
         {
-            _imageRepository = imageRepository;
+           _imageService = imageService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetImages()
         {
-            var response = await _imageRepository.GetAll();
-
-            byte[] num = { 1, 2, 3 };
-            var image = new ImageP()
-            {
-                Name = "new",
-                Description = "Тут могла быть ваша реклама",
-                DateCreate = DateTime.UtcNow,
-                TypeImage = ImageProcessing.Domain.Enum.TypeImage.jpg,
-                Image = num
-                
-            };
-
-            await _imageRepository.Create(image);
-            await _imageRepository.Delete(image);
-            //var response1 = await _imageRepository.GetByName("new");
-
-            return View(response);
+            var response = await _imageService.GetImages();
+            if(response.StatusCode == Models.Enum.StatusCode.OK)
+                return View(response.Data);
+            return RedirectToAction("Index");
         }
+           
     }
 }
+

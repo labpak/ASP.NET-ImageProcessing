@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ImageProcessing.Domain.Enum;
+using ImageProcessing.Models.Enum;
 using System.Drawing;
 
-namespace ImageProcessing.Domain.Entity
+namespace ImageProcessing.Models.Entity
 {
     public class ImageP
     {

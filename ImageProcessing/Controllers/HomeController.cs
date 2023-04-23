@@ -1,6 +1,6 @@
 ﻿using ImageProcessing.DAL.Interfaces;
 using ImageProcessing.DAL.Repositories;
-using ImageProcessing.Domain.Entity;
+using ImageProcessing.Models.Entity;
 using ImageProcessing.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;

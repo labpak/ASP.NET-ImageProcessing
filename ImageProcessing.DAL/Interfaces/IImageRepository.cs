@@ -1,4 +1,4 @@
-﻿using ImageProcessing.Domain.Entity;
+﻿using ImageProcessing.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
