@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ImageProcessing.Domain.Enum;
+using System.Drawing;
+
+namespace ImageProcessing.Domain.Entity
+{
+    public class ImageP
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public TypeImage TypeImage { get; set; }
+        public DateTime DateCreate { get; set; }
+        public byte[] Image { get; set; }
+    }
+}

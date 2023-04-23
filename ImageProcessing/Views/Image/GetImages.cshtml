@@ -1,0 +1,16 @@
+﻿@using ImageProcessing.Domain.Entity;
+@model List<ImageP>
+
+@{
+    ViewData["Title"] = "GetImages";
+}
+
+<h1>GetImages</h1>
+
+@foreach(var image in Model)
+{
+    <p>@image.Name</p>
+    <p>@image.Description</p>
+
+    <p>@image.DateCreate</p>
+}

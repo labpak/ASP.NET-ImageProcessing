@@ -1,0 +1,12 @@
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\bin\Debug\net6.0\ImageProcessing.Domain.deps.json
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\bin\Debug\net6.0\ImageProcessing.Domain.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\bin\Debug\net6.0\ImageProcessing.Domain.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.csproj.AssemblyReference.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.AssemblyInfoInputs.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.AssemblyInfo.cs
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\refint\ImageProcessing.Domain.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ImageProcessing.Domain.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.Domain\obj\Debug\net6.0\ref\ImageProcessing.Domain.dll
