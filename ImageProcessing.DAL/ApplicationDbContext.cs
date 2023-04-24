@@ -21,5 +21,5 @@ namespace ImageProcessing.DAL
             optionsBuilder.UseSqlServer("Server=MANUL\\SQLEXPRESS;Database=ImageProc;Trusted_Connection=True;TrustServerCertificate=True");
         }
         public DbSet<ImageP> ImageP { get; set; } // для получения даных из бд
-    }
+    }   
 }

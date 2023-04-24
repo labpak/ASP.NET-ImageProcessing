@@ -8,6 +8,7 @@ namespace ImageProcessing.Models.Enum
 {
     public enum StatusCode
     {
+        ImageNotFound = 0,
         OK = 200,
         InternalServerError = 500
     }
