@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\ImageProcessing.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\backImage.css",
+      "PackagePath": "staticwebassets\\css\\backImage.css"
+    },
+    {
+      "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\card.css",
+      "PackagePath": "staticwebassets\\css\\card.css"
+    },
+    {
+      "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\label.css",
+      "PackagePath": "staticwebassets\\css\\label.css"
+    },
+    {
+      "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\menu.css",
+      "PackagePath": "staticwebassets\\css\\menu.css"
+    },
+    {
+      "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\paragraph.css",
+      "PackagePath": "staticwebassets\\css\\paragraph.css"
+    },
+    {
       "Id": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
