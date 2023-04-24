@@ -17,7 +17,7 @@ namespace Service.Implementation
 {
     public class ImageService : IImageService
     {
-        private readonly IImageRepository _imageRepository;
+        //private readonly IImageRepository _imageRepository;
         private readonly ApplicationDbContext _db;//мб напрямую без repository?
 
         //public ImageService(IImageRepository imageRepository)
@@ -110,9 +110,10 @@ namespace Service.Implementation
                 };
             }
         }
-        public async Task<IBaseResponse<bool>> DeleteImage(ImageP entity)
+        public async Task<IBaseResponse<bool>> DeleteImage(int id)
         {
             var baseResponse = new BaseResponse<bool>();
+            var entity = await _db.ImageP.FirstOrDefaultAsync(p => p.Id == id);
             try
             {
                 if (entity.Equals(null))
@@ -133,14 +134,15 @@ namespace Service.Implementation
             }
             catch (Exception ex)
             {
-                return new BaseResponse<ImageP>()
+                return new BaseResponse<bool>()
                 {
+                    Data = false,
                     Description = $"[GetImages] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
                 };
             }
         }
-        public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel entity)
+        public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model)
         {
             var baseResponse = new BaseResponse<bool>();
             try
@@ -148,16 +150,15 @@ namespace Service.Implementation
                 var image = new ImageP()
                 {
                     DateCreate = DateTime.Now,
-                    Description = entity.Description,
-                    Name = entity.Name,
-                    TypeImage = (TypeImage)Convert.ToInt32(entity.TypeImage),
-                    Width = entity.Width,
-                    Height = entity.Height,
+                    Description = model.Description,
+                    Name = model.Name,
+                    TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
+                    Width = model.Width,
+                    Height = model.Height
                 };
 
                 await _db.ImageP.AddAsync(image);
                 await _db.SaveChangesAsync();
-
 
                 baseResponse.Data = true;
                 baseResponse.StatusCode = StatusCode.OK;
@@ -165,9 +166,45 @@ namespace Service.Implementation
             }
             catch (Exception ex)
             {
+                return new BaseResponse<bool>()
+                {
+                    Data = false,
+                    Description = $"[GetImages] : {ex.Message}",
+                    StatusCode = StatusCode.InternalServerError
+                };
+            }
+        }
+
+        public async Task<IBaseResponse<ImageP>> Edit(int id, ImageViewModel model)
+        {
+            var baseResponse = new BaseResponse<ImageP>();
+            try
+            {
+                var image = await _db.ImageP.FirstOrDefaultAsync(p => p.Id == id);
+                if (image.Equals(null))
+                {
+                    baseResponse.StatusCode = StatusCode.ImageNotFound;
+                    baseResponse.Description = "Image not found";
+                    return baseResponse;
+                }
+
+                image.DateCreate = DateTime.Now;
+                image.Description = model.Description;
+                image.Name = model.Name;
+                //image.TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage);
+                image.Width = model.Width;
+                image.Height = model.Height;
+
+                _db.ImageP.Update(image);
+                await _db.SaveChangesAsync();
+
+                baseResponse.Data = image;
+                return baseResponse;
+            }
+            catch (Exception ex) 
+            {
                 return new BaseResponse<ImageP>()
                 {
-                    baseResponse.Data = false;
                     Description = $"[GetImages] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
                 };
