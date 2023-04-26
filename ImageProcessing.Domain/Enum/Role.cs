@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace ImageProcessing.Models.Enum
 {
-    public enum StatusCode
+    public enum Role
     {
-        ImageNotFound = 0,
-        OK = 200,
-        UserNotFound = 403,
-        InternalServerError = 500
+        Admin = 0,
+        Moderator = 1,
+        User = 2
     }
 }

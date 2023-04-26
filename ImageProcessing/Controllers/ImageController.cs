@@ -29,7 +29,7 @@ namespace ImageProcessing.Controllers
         [HttpGet]
         public async Task<IActionResult> GetImage(int id)
         {
-            var response = await _imageService.Get(id);
+            var response = await _imageService.GetImage(id);
             if (response.StatusCode.Equals(Models.Enum.StatusCode.OK))
                 return View(response.Data);
             return RedirectToAction("Error");
@@ -48,10 +48,12 @@ namespace ImageProcessing.Controllers
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Save(int id)
         {
-            if (id == 0)//новый объект добавляем
-                return View();
 
-            var response = await _imageService.Get(id);
+            ModelState.Remove("DateCreate");
+            if (id == 0)//новый объект добавляем
+                return PartialView();
+
+            var response = await _imageService.GetImage(id);
             if (response.StatusCode == Models.Enum.StatusCode.OK)
                 return View(response.Data);
 
@@ -60,11 +62,24 @@ namespace ImageProcessing.Controllers
         [HttpPost]
         public async Task<IActionResult> Save(ImageViewModel model)
         {
-            if (ModelState.IsValid)//атрибуты, ограничения и тп
+            ModelState.Remove("Id");
+            ModelState.Remove("DateCreate");
+            if (ModelState.IsValid)
+            {
                 if (model.Id == 0)
-                    await _imageService.CreateImage(model);
-                else 
-                   await _imageService.Edit(model.Id, model);
+                {
+                    byte[] imageData;
+                    using (var binaryReader = new BinaryReader(model.formImage.OpenReadStream()))
+                    {
+                        imageData = binaryReader.ReadBytes((int)model.Image.Length);
+                    }
+                    await _imageService.CreateImage(model, imageData);
+                }
+                else
+                {
+                    await _imageService.Edit(model.Id, model);
+                }
+            }
             return RedirectToAction("GetImages");
         }
     }

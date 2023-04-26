@@ -12,10 +12,10 @@ namespace Service.Interfaces
     public interface IImageService
     {
         Task<IBaseResponse<IEnumerable<ImageP>>> GetImages();
-        Task<IBaseResponse<ImageP>> Get(int id);
+        Task<IBaseResponse<ImageP>> GetImage(int id);
         Task<IBaseResponse<ImageP>> GetByName(string name);
         Task<IBaseResponse<bool>> DeleteImage(int id);
-        Task<IBaseResponse<bool>> CreateImage(ImageViewModel model);
+        Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData);
         Task<IBaseResponse<ImageP>> Edit(int id, ImageViewModel model);
     }
 }

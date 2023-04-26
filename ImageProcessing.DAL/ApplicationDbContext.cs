@@ -1,4 +1,5 @@
 ﻿using ImageProcessing.Models.Entity;
+using ImageProcessing.Models.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,5 +22,26 @@ namespace ImageProcessing.DAL
             optionsBuilder.UseSqlServer("Server=MANUL\\SQLEXPRESS;Database=ImageProc;Trusted_Connection=True;TrustServerCertificate=True");
         }
         public DbSet<ImageP> ImageP { get; set; } // для получения даных из бд
+
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>(builder =>
+            {
+                builder.HasData(new User
+                {
+                    Id = 1,
+                    Name = "admin",
+                    Password = HashPasswordHelper.HashPassowrd("admin"),
+                    Role = Models.Enum.Role.Admin
+                });
+            
+                builder.ToTable("Users").HasKey(x => x.Id);
+                builder.Property(x => x.Id).ValueGeneratedOnAdd();
+                builder.Property(x => x.Password).IsRequired();
+                builder.Property(x => x.Name).HasMaxLength(128).IsRequired();
+            });
+        }
     }   
 }

@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,20 +31,25 @@ namespace Service.Implementation
         }
         public async Task<IBaseResponse<IEnumerable<ImageP>>> GetImages()
         {
-            var baseResponse = new BaseResponse<IEnumerable<ImageP>>();
             try
             {
                 //var images = await _imageRepository.GetAll();
                 var images = await _db.ImageP.ToListAsync();
                 if (images.Count == 0)
                 {
-                    baseResponse.Description = "Изображения отсутствуют";
-                    baseResponse.StatusCode = StatusCode.OK;
-                    return baseResponse;
+
+                    return new BaseResponse<IEnumerable<ImageP>>()
+                    {
+                        Description = "Изображения отсутствуют",
+                        StatusCode = StatusCode.OK
+                    };
                 }
-                baseResponse.Data = images;
-                baseResponse.StatusCode = StatusCode.OK;
-                return baseResponse;
+
+                return new BaseResponse<IEnumerable<ImageP>>()
+                {
+                    Data = images,
+                    StatusCode = StatusCode.OK
+                };
             }
             catch (Exception ex)
             {
@@ -56,12 +62,11 @@ namespace Service.Implementation
             }
         }
 
-        public async Task<IBaseResponse<ImageP>> Get(int id)
+        public async Task<IBaseResponse<ImageP>> GetImage(int id)
         {
             var baseResponse = new BaseResponse<ImageP>();
             try 
             {
-                //var image = await _imageRepository.Get(id);
                 var image = await _db.ImageP.FirstOrDefaultAsync(p => p.Id == id);
                 if (image == null)
                 {
@@ -141,7 +146,7 @@ namespace Service.Implementation
                 };
             }
         }
-        public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model)
+        public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData)
         {
             var baseResponse = new BaseResponse<bool>();
             try
@@ -153,7 +158,8 @@ namespace Service.Implementation
                     Name = model.Name,
                     TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
                     Width = model.Width,
-                    Height = model.Height
+                    Height = model.Height,
+                    Image = imageData
                 };
 
                 await _db.ImageP.AddAsync(image);
