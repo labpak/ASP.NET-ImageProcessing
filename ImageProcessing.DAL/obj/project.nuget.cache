@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "tJBZn/tHV8GXqkzU546VgDAvFW60IbCMQy5e0UkmDSuo4mzI32XyAO28Hd4SzOUyvKOb7asQrlmsv8JMICdERg==",
+  "dgSpecHash": "O5saJ1W4WMKWg5j/oE2RKf4G+Kgwgl6MUZjq0hOUUuZHmOfSyBMjguj+8YvgpLCxUkYGTc8AicnBqC9zsBfj7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.DAL\\ImageProcessing.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jlabp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
@@ -45,6 +46,7 @@
     "C:\\Users\\jlabp\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\jlabp\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

@@ -1,5 +1,4 @@
 ﻿using Azure;
-using ImageProcessing.DAL.Interfaces;
 using ImageProcessing.Models.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
@@ -23,7 +22,7 @@ namespace ImageProcessing.Controllers
         {
             var response = await _imageService.GetImages();
             if (response.StatusCode == Models.Enum.StatusCode.OK)
-                return View(response.Data);
+                return View(response.Data.ToList());
             return RedirectToAction("Error");
         }
 
@@ -46,7 +45,7 @@ namespace ImageProcessing.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Save(int id)
         {
             if (id == 0)//новый объект добавляем

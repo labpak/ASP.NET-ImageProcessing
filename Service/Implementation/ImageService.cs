@@ -1,5 +1,4 @@
 ﻿using ImageProcessing.DAL;
-using ImageProcessing.DAL.Interfaces;
 using ImageProcessing.Models.Entity;
 using ImageProcessing.Models.Enum;
 using ImageProcessing.Models.Response;

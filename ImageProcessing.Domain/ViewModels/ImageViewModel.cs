@@ -1,4 +1,5 @@
 ﻿using ImageProcessing.Models.Enum;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace ImageProcessing.Models.ViewModels
         public int Height { get; set; }
         public string TypeImage { get; set; }
         public DateTime DateCreate { get; set; }
+        public IFormFile formFile { get; set; }
     }
 }
