@@ -18,12 +18,12 @@
 </div>
 
 <div style="padding: 10px;"></div>
-@if (Model.Count == 0)
+@if (Model == null)
 {
     <div class="card col-md-12">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="https://images.wallpaperscraft.ru/image/single/bmw_fary_podsvetka_137326_1280x720.jpg"
+                <img src="https://sun6-21.userapi.com/s/v1/ig2/WQo3ZaP0xNQxBPqcpEq_eSkiKblznoWTr3l0PznJ5SDIZZxXHuI7LVwHqNnAeQWohZTDaNCvx7Xqvvr5KHTmuqdv.jpg?size=400x0&quality=96&crop=143,23,433,433&ava=1"
                  class="img-fluid rounded-start rounded">
             </div>
             <div class="col-md-8">
@@ -73,7 +73,7 @@ else
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Разрешение: @image.Width x @image.Height</li>
-                            <li class="list-group-item">@image.TypeImage</li>
+                         @*   <li class="list-group-item">@image.TypeImage</li>*@
                         </ul>
                         <div class="card-body">
                             <a asp-action="GetImage" asp-route-id="@image.Id" class="card-link">Перейти</a>
@@ -81,8 +81,8 @@ else
                             @if (User.IsInRole("Admin"))
                             {
                                 <hr />
-                                <a asp-controller="Car" asp-action="Delete" asp-route-id="@image.Id" class="btn btn-danger">Удалить</a>
-                                <a asp-controller="Car" asp-action="Save" asp-route-id="@image.Id" class="btn btn-primary">Изменить</a>
+                                <a asp-controller="Image" asp-action="Delete" asp-route-id="@image.Id" class="btn btn-danger">Удалить</a>
+                                <a asp-controller="Image" asp-action="Save" asp-route-id="@image.Id" class="btn btn-primary">Изменить</a>
                             }
                         </div>
                     </div>

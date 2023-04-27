@@ -15,9 +15,9 @@ namespace ImageProcessing.Models.ViewModels
         public string Description { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        public string TypeImage { get; set; }
+        //public string TypeImage { get; set; }
         public DateTime DateCreate { get; set; }
         public byte[] Image { get; set; }
-        public IFormFile formImage { get; set; }
+        public IFormFile formFile { get; set; }
     }
 }

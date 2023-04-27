@@ -29,7 +29,7 @@ namespace Service.Implementation
         { 
             _db = db;
         }
-        public async Task<IBaseResponse<IEnumerable<ImageP>>> GetImages()
+        public async Task<IBaseResponse<List<ImageP>>> GetImages()
         {
             try
             {
@@ -38,14 +38,14 @@ namespace Service.Implementation
                 if (images.Count == 0)
                 {
 
-                    return new BaseResponse<IEnumerable<ImageP>>()
+                    return new BaseResponse<List<ImageP>>()
                     {
                         Description = "Изображения отсутствуют",
                         StatusCode = StatusCode.OK
                     };
                 }
 
-                return new BaseResponse<IEnumerable<ImageP>>()
+                return new BaseResponse<List<ImageP>>()
                 {
                     Data = images,
                     StatusCode = StatusCode.OK
@@ -53,7 +53,7 @@ namespace Service.Implementation
             }
             catch (Exception ex)
             {
-                return new BaseResponse<IEnumerable<ImageP>>()
+                return new BaseResponse<List<ImageP>>()
                 {
                     Description = $"[GetImages] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
@@ -120,7 +120,7 @@ namespace Service.Implementation
             var entity = await _db.ImageP.FirstOrDefaultAsync(p => p.Id == id);
             try
             {
-                if (entity.Equals(null))
+                if (entity == null)
                 {
                     baseResponse.Description = "Изображение отсутствует";
                     baseResponse.StatusCode = StatusCode.ImageNotFound;
@@ -148,18 +148,20 @@ namespace Service.Implementation
         }
         public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData)
         {
+           byte[] ewq = { 1,2,3};
             var baseResponse = new BaseResponse<bool>();
             try
             {
                 var image = new ImageP()
                 {
+                    Id = model.Id,
                     DateCreate = DateTime.Now,
                     Description = model.Description,
                     Name = model.Name,
-                    TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
+                    //TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
                     Width = model.Width,
                     Height = model.Height,
-                    Image = imageData
+                    Image = ewq
                 };
 
                 await _db.ImageP.AddAsync(image);
@@ -186,7 +188,7 @@ namespace Service.Implementation
             try
             {
                 var image = await _db.ImageP.FirstOrDefaultAsync(p => p.Id == id);
-                if (image.Equals(null))
+                if (image == null)
                 {
                     baseResponse.StatusCode = StatusCode.ImageNotFound;
                     baseResponse.Description = "Image not found";

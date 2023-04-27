@@ -36,11 +36,17 @@ namespace ImageProcessing.DAL
                     Password = HashPasswordHelper.HashPassowrd("admin"),
                     Role = Models.Enum.Role.Admin
                 });
-            
+
                 builder.ToTable("Users").HasKey(x => x.Id);
                 builder.Property(x => x.Id).ValueGeneratedOnAdd();
                 builder.Property(x => x.Password).IsRequired();
                 builder.Property(x => x.Name).HasMaxLength(128).IsRequired();
+            });
+            
+            modelBuilder.Entity<ImageP>(builder =>
+            {
+                builder.ToTable("ImageP").HasKey(x => x.Id);
+                builder.Property(x => x.Id).ValueGeneratedOnAdd();
             });
         }
     }   

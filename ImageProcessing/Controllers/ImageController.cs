@@ -22,8 +22,8 @@ namespace ImageProcessing.Controllers
         {
             var response = await _imageService.GetImages();
             if (response.StatusCode == Models.Enum.StatusCode.OK)
-                return View(response.Data.ToList());
-            return RedirectToAction("Error");
+                return View(response.Data);
+            return View("Error", $"{response.Description}");
         }
 
         [HttpGet]
@@ -48,30 +48,28 @@ namespace ImageProcessing.Controllers
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> Save(int id)
         {
-
-            ModelState.Remove("DateCreate");
             if (id == 0)//новый объект добавляем
                 return PartialView();
 
             var response = await _imageService.GetImage(id);
             if (response.StatusCode == Models.Enum.StatusCode.OK)
-                return View(response.Data);
+                return PartialView(response.Data);
 
-            return RedirectToAction("Error");
+            ModelState.AddModelError("", response.Description);
+            return PartialView();
         }
         [HttpPost]
         public async Task<IActionResult> Save(ImageViewModel model)
         {
             ModelState.Remove("Id");
             ModelState.Remove("DateCreate");
-            if (ModelState.IsValid)
-            {
+            
                 if (model.Id == 0)
                 {
                     byte[] imageData;
-                    using (var binaryReader = new BinaryReader(model.formImage.OpenReadStream()))
+                    using (var binaryReader = new BinaryReader(model.formFile.OpenReadStream()))
                     {
-                        imageData = binaryReader.ReadBytes((int)model.Image.Length);
+                        imageData = binaryReader.ReadBytes((int)model.formFile.Length);
                     }
                     await _imageService.CreateImage(model, imageData);
                 }
@@ -79,7 +77,8 @@ namespace ImageProcessing.Controllers
                 {
                     await _imageService.Edit(model.Id, model);
                 }
-            }
+            
+
             return RedirectToAction("GetImages");
         }
     }

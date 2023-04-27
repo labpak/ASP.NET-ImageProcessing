@@ -10,6 +10,7 @@ namespace ImageProcessing.Models.Response
 {
     public interface IBaseResponse<T>
     {
+        public string Description { get; set; }
         StatusCode StatusCode { get; }
         public T Data { get; }
     }

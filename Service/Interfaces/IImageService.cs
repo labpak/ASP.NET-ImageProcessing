@@ -11,7 +11,7 @@ namespace Service.Interfaces
 {
     public interface IImageService
     {
-        Task<IBaseResponse<IEnumerable<ImageP>>> GetImages();
+        Task<IBaseResponse<List<ImageP>>> GetImages();
         Task<IBaseResponse<ImageP>> GetImage(int id);
         Task<IBaseResponse<ImageP>> GetByName(string name);
         Task<IBaseResponse<bool>> DeleteImage(int id);

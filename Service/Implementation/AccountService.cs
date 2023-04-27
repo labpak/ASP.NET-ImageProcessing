@@ -28,7 +28,7 @@ namespace Service.Implementation
             try 
             { 
                 var user = await _db.Users.FirstOrDefaultAsync(x => x.Name == model.Name);
-                if (!user.Equals(null))
+                if (user != null)
                 {
                     return new BaseResponse<ClaimsIdentity>()
                     {
@@ -69,7 +69,7 @@ namespace Service.Implementation
             try
             {
                 var user = await _db.Users.FirstOrDefaultAsync(x => x.Name == model.Name);
-                if (user.Equals(null))
+                if (user == null)
                 {
                     return new BaseResponse<ClaimsIdentity>()
                     {
@@ -107,7 +107,7 @@ namespace Service.Implementation
             try
             {
                 var user = await _db.Users.FirstOrDefaultAsync(x => x.Name == model.Name);
-                if (user.Equals(null))
+                if (user == null)
                 {
                     return new BaseResponse<bool>()
                     {

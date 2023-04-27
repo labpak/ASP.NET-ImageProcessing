@@ -21,7 +21,7 @@ namespace ImageProcessing
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
            
             builder.Services.AddScoped<IImageService, ImageService>();
-            //builder.Services.AddScoped<IBaseResponse, BaseResponse>();
+            builder.Services.AddScoped<IAccountService, AccountService>();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
@@ -48,6 +48,7 @@ namespace ImageProcessing
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",

@@ -14,9 +14,10 @@ namespace ImageProcessing.Controllers
     {
         // GET: AccountController
         private readonly IAccountService _accountService;
-        public ActionResult Index()
+
+        public AccountController(IAccountService accountService)
         {
-            return View();
+            _accountService = accountService;
         }
 
         [HttpGet]

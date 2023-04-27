@@ -51,7 +51,7 @@
                             </div>
                         </li>
                     }
-                    @if (User.Identity.IsAuthenticated)
+@*                    @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle paragraphLayout active text-black" href="#" data-toggle="dropdown" style="font-family:'Comic Sans MS'; font-weight: bold;">
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </li>
-                    }
+                    }*@
                     @if (User.IsInRole("Admin"))
                     {
                         <li class="nav-item dropdown">
