@@ -1,0 +1,26 @@
+﻿@model ImageProcessing.Models.ViewModels.ImageViewModel
+
+
+@{
+    ViewData["Title"] = "Processing";
+}
+
+<div class="text-center">
+    <h3>Выберите файл для загрузки</h3>
+    <form asp-action="GetProcessingImage" asp-controller="Image" enctype="multipart/form-data">
+        <input asp-for="Id" hidden />
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" type="text">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <div class="input-group mb-3">
+            <input asp-for="formFile" class="form-control" type="file">
+        </div>
+        <button class="btn btn-primary btn-lg float-right" type="submit">Отправить</button>
+    </form>
+</div>

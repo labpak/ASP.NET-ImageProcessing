@@ -17,14 +17,7 @@ namespace Service.Implementation
 {
     public class ImageService : IImageService
     {
-        //private readonly IImageRepository _imageRepository;
-        private readonly ApplicationDbContext _db;//мб напрямую без repository?
-
-        //public ImageService(IImageRepository imageRepository)
-        //{ 
-        //    _imageRepository = imageRepository;
-        //}
-
+        private readonly ApplicationDbContext _db;
         public ImageService(ApplicationDbContext db)
         { 
             _db = db;
@@ -33,7 +26,6 @@ namespace Service.Implementation
         {
             try
             {
-                //var images = await _imageRepository.GetAll();
                 var images = await _db.ImageP.ToListAsync();
                 if (images.Count == 0)
                 {
@@ -148,7 +140,7 @@ namespace Service.Implementation
         }
         public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData)
         {
-           byte[] ewq = { 1,2,3};
+           //byte[] ewq = { 1,2,3};
             var baseResponse = new BaseResponse<bool>();
             try
             {
@@ -159,9 +151,9 @@ namespace Service.Implementation
                     Description = model.Description,
                     Name = model.Name,
                     //TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
-                    Width = model.Width,
-                    Height = model.Height,
-                    Image = ewq
+                    //Width = model.Width,
+                    //Height = model.Height,
+                    Image = imageData
                 };
 
                 await _db.ImageP.AddAsync(image);
@@ -199,8 +191,8 @@ namespace Service.Implementation
                 image.Description = model.Description;
                 image.Name = model.Name;
                 //image.TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage);
-                image.Width = model.Width;
-                image.Height = model.Height;
+                //image.Width = model.Width;
+                //image.Height = model.Height;
 
                 _db.ImageP.Update(image);
                 await _db.SaveChangesAsync();

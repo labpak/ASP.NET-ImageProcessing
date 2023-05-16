@@ -21,6 +21,7 @@ namespace ImageProcessing
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
            
             builder.Services.AddScoped<IImageService, ImageService>();
+            builder.Services.AddScoped<IImageProcessingService, ImageProcessingService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

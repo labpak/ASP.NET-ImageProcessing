@@ -66,7 +66,13 @@ else
             <div class="row row-cols-1 col-md-4 text-center">
                 <div class="col" style="padding: 10px;">
                     <div class="card">
-                        <img src="https://sun6-21.userapi.com/s/v1/ig2/WQo3ZaP0xNQxBPqcpEq_eSkiKblznoWTr3l0PznJ5SDIZZxXHuI7LVwHqNnAeQWohZTDaNCvx7Xqvvr5KHTmuqdv.jpg?size=400x0&quality=96&crop=143,23,433,433&ava=1" class="card-img-top" alt="@image.Name">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="data:image/jpeg;base64,@Convert.ToBase64String(image?.Image ?? Array.Empty<byte>())"
+                             class="img-fluid rounded-start rounded">
+                            </div>
+                        </div>
+                        @*<img src="https://sun6-21.userapi.com/s/v1/ig2/WQo3ZaP0xNQxBPqcpEq_eSkiKblznoWTr3l0PznJ5SDIZZxXHuI7LVwHqNnAeQWohZTDaNCvx7Xqvvr5KHTmuqdv.jpg?size=400x0&quality=96&crop=143,23,433,433&ava=1" class="card-img-top" alt="@image.Name">*@
                         <div class="card-body">
                             <h5 class="card-title">@image.Name</h5>
                             <p class="card-text">@image.Description</p>
