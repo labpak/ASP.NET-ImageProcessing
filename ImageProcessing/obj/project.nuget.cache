@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d5CW9GT9s6mAp2L/SUX4QrjjLUCyMBbOtLsuWH3fNMMjZn1sHPH96vXrgyYi5ekWtN90zLKluBuUahqWjxy2Ow==",
+  "dgSpecHash": "i2283OIoHBzg73iLm6rvbr9bt9Iw2ziJkTp4esl+3NP50F+pQch742foSip+3TIaHMCAFz9AabQlIHTyfPLi3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing\\ImageProcessing.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\jlabp\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

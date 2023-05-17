@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.reg {
+    font-size: 25px;
+    font-family: Algerian;
+    margin-left: 1470px;
+}
+
+.log {
+    font-size: 25px;
+    font-family: Algerian;
+    margin-left: 10px;
+}

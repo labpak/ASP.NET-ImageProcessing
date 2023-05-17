@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w9p5N99Qpn/rls9AEXpL7MharwjwP2oi984uK8Lc9UzYKQhU8h3NdTtzJ4TbCATivOw+hMPuzACd0hyTb8cwTg==",
+  "dgSpecHash": "fT34YPaNAdxgBQNt5UnqrUuIxQt91b7fRsCPQD0ySZK7y+vZVZOYDxSQzc/gkDq+doeCoOx/ChXoP7fpxMntUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\Service\\Service.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\jlabp\\.nuget\\packages\\emgu.runtime.windows.msvc.rt.arm64\\19.35.32217.1\\emgu.runtime.windows.msvc.rt.arm64.19.35.32217.1.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\emgu.runtime.windows.msvc.rt.x64\\19.35.32217.1\\emgu.runtime.windows.msvc.rt.x64.19.35.32217.1.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\emgu.runtime.windows.msvc.rt.x86\\19.35.32217.1\\emgu.runtime.windows.msvc.rt.x86.19.35.32217.1.nupkg.sha512",
+    "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jlabp\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

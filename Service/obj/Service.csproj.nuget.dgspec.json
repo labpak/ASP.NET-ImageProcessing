@@ -212,6 +212,10 @@
             "Emgu.CV.runtime.windows": {
               "target": "Package",
               "version": "[4.7.0.5276, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

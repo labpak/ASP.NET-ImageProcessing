@@ -14,7 +14,8 @@
           "Emgu.CV.Bitmap": "4.7.0.5276",
           "Emgu.CV.runtime.windows": "4.7.0.5276",
           "ImageProcessing.DAL": "1.0.0",
-          "ImageProcessing.Models": "1.0.0"
+          "ImageProcessing.Models": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
         "runtime": {
           "Service.dll": {}
@@ -269,6 +270,18 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "14.34.31938.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "System.Text.Encodings.Web": "4.7.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
           }
         }
       },
@@ -1009,6 +1022,13 @@
       "sha512": "sha512-prVzHcx3Ge6TSxq9f0HN2P0imSDo8IF+hyEiqa9dx6t8TSRwF0hl56WhUvEFvU7SPE5wq2zVyAVCQ2KHziQa1w==",
       "path": "emgu.runtime.windows.msvc.rt.x86/19.35.32217.1",
       "hashPath": "emgu.runtime.windows.msvc.rt.x86.19.35.32217.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Features/5.0.17": {
       "type": "package",

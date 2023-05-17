@@ -24,13 +24,14 @@ namespace ImageProcessing
             builder.Services.AddScoped<IImageProcessingService, ImageProcessingService>();
             builder.Services.AddScoped<IAccountService, AccountService>();
 
+            builder.Services.AddHttpContextAccessor();
+
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
                 {
                     options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
                     options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
                 }) ;
-
 
 
             var app = builder.Build();

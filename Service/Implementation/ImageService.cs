@@ -9,24 +9,37 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Emgu.CV.Features2D;
 
 namespace Service.Implementation
 {
     public class ImageService : IImageService
     {
         private readonly ApplicationDbContext _db;
-        public ImageService(ApplicationDbContext db)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public ImageService(ApplicationDbContext db, IHttpContextAccessor httpContextAccessor)
         { 
             _db = db;
+            _httpContextAccessor = httpContextAccessor;
         }
         public async Task<IBaseResponse<List<ImageP>>> GetImages()
         {
+            var images = new List<ImageP>();
+            var user = new User();
             try
             {
-                var images = await _db.ImageP.ToListAsync();
+                if (_httpContextAccessor.HttpContext.User.Identity.IsAuthenticated)
+                {
+                    user = await _db.Users.FirstOrDefaultAsync(p => p.Name == _httpContextAccessor.HttpContext.User.Identity.Name);
+                    images = await _db.ImageP.Where(x => x.UserImageId == user.Id).ToListAsync();
+                }
+                    
                 if (images.Count == 0)
                 {
 
@@ -85,7 +98,6 @@ namespace Service.Implementation
             var baseResponse = new BaseResponse<ImageP>();
             try
             {
-                //var image = await _imageRepository.GetByName(name);
                 var image = await _db.ImageP.FirstOrDefaultAsync(p => p.Name == name);
                 if (image == null)
                 {
@@ -139,14 +151,15 @@ namespace Service.Implementation
             }
         }
         public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData)
-        {
-           //byte[] ewq = { 1,2,3};
+        {            
+            var user = await _db.Users.FirstOrDefaultAsync(p => p.Name == _httpContextAccessor.HttpContext.User.Identity.Name);
             var baseResponse = new BaseResponse<bool>();
             try
             {
                 var image = new ImageP()
                 {
                     Id = model.Id,
+                    UserImageId = user.Id,
                     DateCreate = DateTime.Now,
                     Description = model.Description,
                     Name = model.Name,

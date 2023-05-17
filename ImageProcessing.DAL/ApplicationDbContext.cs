@@ -31,7 +31,7 @@ namespace ImageProcessing.DAL
             {
                 builder.HasData(new User
                 {
-                    Id = 1,
+                    Id = 1,                   
                     Name = "admin",
                     Password = HashPasswordHelper.HashPassowrd("admin"),
                     Role = Models.Enum.Role.Admin
@@ -47,6 +47,7 @@ namespace ImageProcessing.DAL
             {
                 builder.ToTable("ImageP").HasKey(x => x.Id);
                 builder.Property(x => x.Id).ValueGeneratedOnAdd();
+                builder.HasOne<User>().WithMany().HasForeignKey(x => x.UserImageId);
             });
         }
     }   
