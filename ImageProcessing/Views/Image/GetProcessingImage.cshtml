@@ -3,10 +3,12 @@
 
 @{
     ViewData["Title"] = "Processing";
+    Layout = "_Layout";
 }
 
-<div class="text-center">
+<div class="text-center" style="position: relative;">
     <h3>Выберите файл для загрузки</h3>
+    <div class="card-body">
     <form asp-action="GetProcessingImage" asp-controller="Image" enctype="multipart/form-data">
         <input asp-for="Id" hidden />
         <div class="form-group">
@@ -23,4 +25,5 @@
         </div>
         <button class="btn btn-primary btn-lg float-right" type="submit">Отправить</button>
     </form>
+    </div>
 </div>

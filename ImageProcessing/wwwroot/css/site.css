@@ -19,12 +19,13 @@ body {
 
 .reg {
     font-size: 25px;
-    font-family: Algerian;
-    margin-left: 1470px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1450px;
 }
 
 .log {
     font-size: 25px;
-    font-family: Algerian;
-    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
 }
+

@@ -5,8 +5,17 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h3>Hello</h3>
-</div>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center" style="position: relative;">
+        <h3>Hello, @User.Identity.Name</h3>
+    </div>
+}
+else
+{
+    <div class="text-center" style="position: relative;">
+        <h3>Hello, newbee, login to process images</h3>
+    </div>
+}
 
 

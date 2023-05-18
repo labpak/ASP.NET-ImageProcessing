@@ -41,9 +41,7 @@ namespace ImageProcessing.Controllers
                 imageData = binaryReader.ReadBytes((int)model.formFile.Length);
             }
 
-
             Bitmap bitmap = _imageProcessingService.FinalImage(new Bitmap(new MemoryStream(imageData)));
-
             ImageConverter converter = new ImageConverter();
             await _imageService.CreateImage(model, (byte[])converter.ConvertTo(bitmap, typeof(byte[]))); 
 
@@ -70,12 +68,11 @@ namespace ImageProcessing.Controllers
             return RedirectToAction("Error");
         }
 
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var response = await _imageService.DeleteImage(id);
             if (response.StatusCode == Models.Enum.StatusCode.OK)
-                RedirectToAction("GetImages");
+                return RedirectToAction("GetImages");
             return RedirectToAction("Error");
         }
 

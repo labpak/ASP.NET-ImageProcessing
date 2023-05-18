@@ -16,6 +16,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Emgu.CV.Features2D;
+using System.Drawing;
+using Emgu.CV;
 
 namespace Service.Implementation
 {
@@ -153,6 +155,9 @@ namespace Service.Implementation
         public async Task<IBaseResponse<bool>> CreateImage(ImageViewModel model, byte[] imageData)
         {            
             var user = await _db.Users.FirstOrDefaultAsync(p => p.Name == _httpContextAccessor.HttpContext.User.Identity.Name);
+
+            Bitmap bitmap = new Bitmap(new MemoryStream(imageData));  
+
             var baseResponse = new BaseResponse<bool>();
             try
             {
@@ -163,9 +168,9 @@ namespace Service.Implementation
                     DateCreate = DateTime.Now,
                     Description = model.Description,
                     Name = model.Name,
-                    //TypeImage = (TypeImage)Convert.ToInt32(model.TypeImage),
-                    //Width = model.Width,
-                    //Height = model.Height,
+                    TypeImage = model.formFile.ContentType,
+                    Width = bitmap.Width,
+                    Height = bitmap.Height,
                     Image = imageData
                 };
 

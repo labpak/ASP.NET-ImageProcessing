@@ -16,7 +16,7 @@ namespace ImageProcessing.Models.Entity
         public string Description { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-        //public TypeImage TypeImage { get; set; }
+        public string TypeImage { get; set; }
         public DateTime DateCreate { get; set; }
         public byte[] Image { get; set; }
     }

@@ -1,5 +1,26 @@
-﻿.backgroundImage {
+﻿/*.backgroundImage {
     background-image: url("https://fanibani.ru/wp-content/uploads/2021/08/Mini-kartinki-v-stile-tumbler024.jpg");
     background-size: cover;
     background-attachment: fixed;
+    opacity: 0.5;
 }
+*/
+
+
+
+.backgroundImage {
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    .backgroundImage::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://fanibani.ru/wp-content/uploads/2021/08/Mini-kartinki-v-stile-tumbler024.jpg");
+        opacity: .6;
+    }

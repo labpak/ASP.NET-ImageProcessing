@@ -1,7 +1,7 @@
 ﻿@using ImageProcessing.Models.Entity;
 @model ImageP
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Изображение";
     Layout = "_Layout";
 }
 
@@ -17,7 +17,7 @@
                 <h5 class="card-title text-center">@Model?.Name</h5>
                 <p class="card-text"><b>Описание: </b>@Model?.Description</p>
                 <p class="card-text"><b>Разрешение: @Model?.Width x @Model?.Height</p>
-               @* <p class="card-text"><b>Тип: </b>@Model?.TypeImage</p>*@
+                <p class="card-text"><b>Тип: </b>@Model?.TypeImage</p>
                 <p class="card-text"><small class="text-muted">Дата создания - @Model?.DateCreate</small></p>
             </div>
         </div>

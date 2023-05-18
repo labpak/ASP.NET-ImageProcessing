@@ -12,7 +12,7 @@
     }
 </style>
 
-<div class="card-buttons-group">
+<div class="card-buttons-group" style="position: relative;">
     <button class="btn btn-danger" id='hideCardsId'>Скрыть</button>
     <button class='btn btn-success' id='showCardsId'>Показать</button>
 </div>
@@ -79,17 +79,11 @@ else
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Разрешение: @image.Width x @image.Height</li>
-                         @*   <li class="list-group-item">@image.TypeImage</li>*@
+                            <li class="list-group-item">Тип изображения: @image.TypeImage</li>
                         </ul>
                         <div class="card-body">
                             <a asp-action="GetImage" asp-route-id="@image.Id" class="card-link">Перейти</a>
-                            @* <a asp-controller="Basket" asp-action="Add" asp-route-id="@id" class="card-link">Добавить</a> *@
-                            @if (User.IsInRole("Admin"))
-                            {
-                                <hr />
-                                <a asp-controller="Image" asp-action="Delete" asp-route-id="@image.Id" class="btn btn-danger">Удалить</a>
-                                <a asp-controller="Image" asp-action="Save" asp-route-id="@image.Id" class="btn btn-primary">Изменить</a>
-                            }
+                            <a asp-controller="Image" asp-action="Delete" asp-route-id="@image.Id" class="card-link">Удалить</a>
                         </div>
                     </div>
                 </div>
