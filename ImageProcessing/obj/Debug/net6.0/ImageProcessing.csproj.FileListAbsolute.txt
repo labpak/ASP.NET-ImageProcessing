@@ -318,3 +318,6 @@ C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\run
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\runtimes\win-x86\native\msvcp140_atomic_wait.dll
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\runtimes\win-x86\native\msvcp140_codecvt_ids.dll
 C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\runtimes\win-x86\native\vcruntime140.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\libman.json
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\ImageProcessing.ImageProcessingMethods.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing\bin\Debug\net6.0\ImageProcessing.ImageProcessingMethods.pdb

@@ -3882,6 +3882,23 @@
           "bin/placeholder/ImageProcessing.DAL.dll": {}
         }
       },
+      "ImageProcessing.ImageProcessingMethods/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AForge": "2.2.5",
+          "AForge.Imaging": "2.2.5",
+          "Emgu.CV": "4.7.0.5276",
+          "Emgu.CV.Bitmap": "4.7.0.5276",
+          "Emgu.CV.runtime.windows": "4.7.0.5276"
+        },
+        "compile": {
+          "bin/placeholder/ImageProcessing.ImageProcessingMethods.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ImageProcessing.ImageProcessingMethods.dll": {}
+        }
+      },
       "ImageProcessing.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3900,12 +3917,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AForge": "2.2.5",
-          "AForge.Imaging": "2.2.5",
-          "Emgu.CV": "4.7.0.5276",
-          "Emgu.CV.Bitmap": "4.7.0.5276",
-          "Emgu.CV.runtime.windows": "4.7.0.5276",
           "ImageProcessing.DAL": "1.0.0",
+          "ImageProcessing.ImageProcessingMethods": "1.0.0",
           "ImageProcessing.Models": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
@@ -10819,6 +10832,11 @@
       "path": "../ImageProcessing.DAL/ImageProcessing.DAL.csproj",
       "msbuildProject": "../ImageProcessing.DAL/ImageProcessing.DAL.csproj"
     },
+    "ImageProcessing.ImageProcessingMethods/1.0.0": {
+      "type": "project",
+      "path": "../ImagePrcessingMethods/ImageProcessing.ImageProcessingMethods.csproj",
+      "msbuildProject": "../ImagePrcessingMethods/ImageProcessing.ImageProcessingMethods.csproj"
+    },
     "ImageProcessing.Models/1.0.0": {
       "type": "project",
       "path": "../ImageProcessing.Domain/ImageProcessing.Models.csproj",
@@ -10833,6 +10851,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "ImageProcessing.DAL >= 1.0.0",
+      "ImageProcessing.ImageProcessingMethods >= 1.0.0",
       "ImageProcessing.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.13",
@@ -10871,6 +10890,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImagePrcessingMethods\\ImageProcessing.ImageProcessingMethods.csproj": {
+              "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImagePrcessingMethods\\ImageProcessing.ImageProcessingMethods.csproj"
+            },
             "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.DAL\\ImageProcessing.DAL.csproj": {
               "projectPath": "C:\\Users\\jlabp\\source\\repos\\ImageProcessing\\ImageProcessing.DAL\\ImageProcessing.DAL.csproj"
             },

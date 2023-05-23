@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessing", "ImageProcessing\ImageProcessing.csproj", "{6A801EF6-B663-44BE-ACB2-832073CB17AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9} = {CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{FA087606-CAB5-41C2-8E5B-046EE32B57E1}"
 EndProject
@@ -16,11 +19,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{246AEB60-C320-4BD0-AF2A-18E655B47659}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9} = {CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7823BD8D-5A02-4602-914D-27B8CA0A6BB9}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageProcessingMethods", "ImageProcessingMethods", "{831B02CC-E868-48A3-9E09-AF97C0BBA153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessing.ImageProcessingMethods", "ImagePrcessingMethods\ImageProcessing.ImageProcessingMethods.csproj", "{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +54,10 @@ Global
 		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +66,7 @@ Global
 		{F4EDC6B3-AF1E-4CF2-89C2-4F9177679D06} = {FA087606-CAB5-41C2-8E5B-046EE32B57E1}
 		{4DA1A2F3-93E3-4B8B-8E87-C4322334E799} = {F74CFE1F-0221-4514-A31F-62A1A8FAAF80}
 		{B5C80454-90B2-4B03-83D2-8D67CCE7FDCF} = {246AEB60-C320-4BD0-AF2A-18E655B47659}
+		{CEEA1BE9-EB5C-443A-B730-526A14A8A4C9} = {831B02CC-E868-48A3-9E09-AF97C0BBA153}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {935B915C-B5C9-4E06-BB1C-96CF18C46CFD}

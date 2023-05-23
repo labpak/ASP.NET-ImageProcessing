@@ -11,7 +11,7 @@ namespace ImageProcessing.Models.Entity
     public class ImageP
     {
         public int Id { get; set; }
-        public int UserImageId { get; set; }
+        public int UserImageId { get; set; }//изменить на userId
         public string Name { get; set; }
         public string Description { get; set; }
         public int Width { get; set; }

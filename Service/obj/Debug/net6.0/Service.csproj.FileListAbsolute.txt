@@ -15,3 +15,5 @@ C:\Users\jlabp\source\repos\ImageProcessing\Service\obj\Debug\net6.0\Service.pdb
 C:\Users\jlabp\source\repos\ImageProcessing\Service\obj\Debug\net6.0\ref\Service.dll
 C:\Users\jlabp\source\repos\ImageProcessing\Service\bin\Debug\net6.0\ImageProcessing.Models.dll
 C:\Users\jlabp\source\repos\ImageProcessing\Service\bin\Debug\net6.0\ImageProcessing.Models.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\Service\bin\Debug\net6.0\ImageProcessing.ImageProcessingMethods.dll
+C:\Users\jlabp\source\repos\ImageProcessing\Service\bin\Debug\net6.0\ImageProcessing.ImageProcessingMethods.pdb

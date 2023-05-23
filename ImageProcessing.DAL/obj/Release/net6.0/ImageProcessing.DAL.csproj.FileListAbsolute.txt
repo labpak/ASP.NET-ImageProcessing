@@ -1,0 +1,15 @@
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Release\net6.0\ImageProcessing.DAL.deps.json
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Release\net6.0\ImageProcessing.DAL.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Release\net6.0\ImageProcessing.DAL.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Release\net6.0\ImageProcessing.Models.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\bin\Release\net6.0\ImageProcessing.Models.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.csproj.AssemblyReference.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.AssemblyInfoInputs.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.AssemblyInfo.cs
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.csproj.CoreCompileInputs.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.csproj.CopyComplete
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\refint\ImageProcessing.DAL.dll
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ImageProcessing.DAL.pdb
+C:\Users\jlabp\source\repos\ImageProcessing\ImageProcessing.DAL\obj\Release\net6.0\ref\ImageProcessing.DAL.dll

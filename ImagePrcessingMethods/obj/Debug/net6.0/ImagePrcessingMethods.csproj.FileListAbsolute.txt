@@ -1,0 +1,5 @@
+C:\Users\jlabp\source\repos\ImageProcessing\ImagePrcessingMethods\obj\Debug\net6.0\ImagePrcessingMethods.csproj.AssemblyReference.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImagePrcessingMethods\obj\Debug\net6.0\ImagePrcessingMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jlabp\source\repos\ImageProcessing\ImagePrcessingMethods\obj\Debug\net6.0\ImagePrcessingMethods.AssemblyInfoInputs.cache
+C:\Users\jlabp\source\repos\ImageProcessing\ImagePrcessingMethods\obj\Debug\net6.0\ImagePrcessingMethods.AssemblyInfo.cs
+C:\Users\jlabp\source\repos\ImageProcessing\ImagePrcessingMethods\obj\Debug\net6.0\ImagePrcessingMethods.csproj.CoreCompileInputs.cache

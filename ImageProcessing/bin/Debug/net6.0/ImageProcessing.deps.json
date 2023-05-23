@@ -9,6 +9,7 @@
       "ImageProcessing/1.0.0": {
         "dependencies": {
           "ImageProcessing.DAL": "1.0.0",
+          "ImageProcessing.ImageProcessingMethods": "1.0.0",
           "ImageProcessing.Models": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13",
@@ -2593,6 +2594,18 @@
           "ImageProcessing.DAL.dll": {}
         }
       },
+      "ImageProcessing.ImageProcessingMethods/1.0.0": {
+        "dependencies": {
+          "AForge": "2.2.5",
+          "AForge.Imaging": "2.2.5",
+          "Emgu.CV": "4.7.0.5276",
+          "Emgu.CV.Bitmap": "4.7.0.5276",
+          "Emgu.CV.runtime.windows": "4.7.0.5276"
+        },
+        "runtime": {
+          "ImageProcessing.ImageProcessingMethods.dll": {}
+        }
+      },
       "ImageProcessing.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
@@ -2604,12 +2617,8 @@
       },
       "Service/1.0.0": {
         "dependencies": {
-          "AForge": "2.2.5",
-          "AForge.Imaging": "2.2.5",
-          "Emgu.CV": "4.7.0.5276",
-          "Emgu.CV.Bitmap": "4.7.0.5276",
-          "Emgu.CV.runtime.windows": "4.7.0.5276",
           "ImageProcessing.DAL": "1.0.0",
+          "ImageProcessing.ImageProcessingMethods": "1.0.0",
           "ImageProcessing.Models": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
         },
@@ -3949,6 +3958,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "ImageProcessing.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ImageProcessing.ImageProcessingMethods/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
